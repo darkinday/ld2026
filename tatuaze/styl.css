@@ -1,0 +1,60 @@
+@font-face {
+    font-family: 'Dancing Script';
+    src: url('czcionki/DancingScript-Regular.woff2') format('woff2'),
+        url('czcionki/DancingScript-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body{
+    font-family: "Dancing Script";
+    text-align: center;
+}
+
+header{
+    background-color: rosybrown;
+    width: 30%;
+    float: left;
+}
+
+aside {
+    text-align: left;
+    width: 30%;
+    height: 350px;
+    float: left;
+    background-color: rosybrown;
+}
+
+nav {
+    background-color: rosybrown;
+    width: 70%;
+    height: 100px;
+    float: left;
+}
+
+section {
+    width: 70%;
+    height: 550px;
+    overflow-y: visible;
+    float: right;
+}
+
+label{
+    height: 50px;
+
+}
+
+.miniatury {
+    width: 150px;
+}
+
+.miniatury:hover {
+    background-color: bisque;
+    width: 200px;
+    transition: width 1s;
+}
+
+footer{
+    clear: both;
+}

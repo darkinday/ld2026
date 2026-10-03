@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tatuaze</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="salon">
+    </header>
+    <nav>
+        <h1>Studio Tatuazu</h1>
+    </nav>
+
+    <section id="section">
+        <h2>Galeria</h2>
+        <img src="smok.png" alt="smok.png" class="miniatury">
+        <img src="koliber.png" alt="koliber.png" class="miniatury">
+    </section>
+
+    <aside>
+        <h3>Dodaj wzor</h3>
+        <label for="nazwa_pliku">wzor</label><br>
+        <input type="file" accept="image/png" name="nazwa_pliku" id="nazwa_pliku"><br>
+        <label for="kolor">kolor</label><br>
+        <select name="kolor" id="kolor"><br>
+            <option value="czarny">czarny</option>
+            <option value="czerwony">czerwony</option>
+            <option value="zielony"> zielony</option>
+            <option value="niebieski">niebieski</option>
+        </select>
+        <label for="cena">cena</label><br>
+        <input type="number" id="cena" value="30"><br>
+        <input type="submit" name="dodaj wzor" onclick="main()">
+    </aside>
+    <footer>
+        <p>autor strony:mangomangomango</p>
+    </footer>
+</body>
+<script>
+    function main() {
+        let path = document.getElementById("nazwa_pliku").value.split("\\")
+        let file_name = path[path.length - 1]
+
+        let kolor = document.getElementById("kolor").value
+        let cena = document.getElementById("cena").value
+
+        alert("wzor: " + file_name + ", kolor: " + kolor + " w cenie " + cena + " zl")
+
+
+        var img = document.createElement("img");
+        img.src = file_name;
+        img.className = "miniatury"
+        var src = document.getElementById("section");
+        src.appendChild(img);
+
+
+    }
+</script>
+</html>
