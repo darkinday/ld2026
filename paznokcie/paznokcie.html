@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylizacja paznokci</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <aside>
+        <img src="manicure.jpg" alt="Stylizacja paznokci">
+    </aside>
+    <main>
+        <header>
+            <h1>twoje wymarzone paznokcie</h1>
+        </header>
+        <nav>
+            <button onmouseover="skrypt2(this.id)" id="button1">kolor</button>
+            <button onmouseover="skrypt2(this.id)" id="button2">ksztalt</button>
+            <button onmouseover="skrypt2(this.id)" id="button3">wzor</button>
+        </nav>
+        <section id="sekcja1">
+            <h2>kolor</h2> <br>
+            <img src="kolory.png" alt="kolory paznokci"> <br>
+            <input type="color" value="#FF0000" id="kolor">
+        </section>
+        <section id="sekcja2">
+            <h2>ksztalt</h2> <br>
+            <img src="ksztalt.png" alt="ksztalty paznokci"> <br>
+            <select name="ksztalty" id="">
+                <option value="migdal">migdal</option>
+                <option value="zaokraglony">zaokraglony</option>
+                <option value="kwadratowy">kwadratowy</option>
+                <option value="balerina">balerina</option>
+                <option value="zaokraglony_kwadrat">zaokraglony kwadrat</option>
+            </select>
+        </section>
+        <section id="sekcja3">
+            <h2>wzor</h2> <br>
+            <input type="number" min="1" max="10" step="1" id="rozmiar"> <br>
+        </section>
+    </main>
+    <footer>
+        <p><em>autor:mangomangomango</em></p>
+    </footer>
+</body>
+<script>
+    let check = 0 
+    function skrypt2(id = "button1") {
+        let button1 = document.getElementById("button1")
+        let button2 = document.getElementById("button2")
+        let button3 = document.getElementById("button3")
+        let sekcja1 = document.getElementById("sekcja1")
+        let sekcja2 = document.getElementById("sekcja2")
+        let sekcja3 = document.getElementById("sekcja3")
+
+
+        if (id == "button1") {
+            sekcja1.style.display = "block"
+            sekcja2.style.display = "none"
+            sekcja3.style.display = "none"
+            button1.style.backgroundColor  = "salmon"
+            button2.style.backgroundColor  = "crimson"
+            button3.style.backgroundColor  = "crimson"
+        } else if (id == "button2") {
+            sekcja1.style.display = "none"
+            sekcja2.style.display = "block"
+            sekcja3.style.display = "none"
+            button1.style.backgroundColor  = "crimson"
+            button2.style.backgroundColor  = "salmon"
+            button3.style.backgroundColor  = "crimson"
+        } else if (id == "button3") {
+            sekcja1.style.display = "none"
+            sekcja2.style.display = "none"
+            sekcja3.style.display = "block"
+            button1.style.backgroundColor  = "crimson"
+            button2.style.backgroundColor  = "crimson"
+            button3.style.backgroundColor  = "salmon"
+        }
+        if (check == 0) {
+            for (num = 1; num <=10; num++) {
+                nazwa = num + ".jpg"
+                let obraz = document.createElement("img")
+                obraz.src = nazwa
+                obraz.className = "wzory"
+                obraz.title = num
+                sekcja3.appendChild(obraz)
+            }
+            check = 1
+        }
+        }
+
+</script>
+</html>
