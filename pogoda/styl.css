@@ -1,0 +1,66 @@
+body {
+    font-family: Georgia;
+    text-align: center;
+
+}
+
+header{
+    width: 20%;
+    float: left;
+    background-color: #8caf8e;
+    color: white;
+    height: 100px;
+}
+
+nav {
+    width: 80%;
+    float: right;
+    background-color: #388E3C;
+    color: white;
+    height: 100px;
+}
+
+section {
+    background-color: #DCE775;
+    width: 50%;
+    height: 600px;
+    float: right;
+}
+
+article {
+    background-color: #DCE775;
+    width: 50%;
+    height: 600px;
+    float: left;
+}
+
+footer {
+    background-color: #388E3C;
+    color: white;
+}
+
+table {
+    width: 80%;
+    margin: auto;
+    border: dashed 2px #388E3C ;
+}
+
+table img{
+    height: 70px;
+}
+
+a {
+    color: #388E3C;
+    margin: 20px;
+    font-style: italic;
+    font-size: 200%;
+}
+
+p {
+    margin: 0px;
+}
+
+a:hover {
+    background-color: #388E3C;
+    color: #DCE775;
+}
