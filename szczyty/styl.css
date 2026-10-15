@@ -1,0 +1,108 @@
+
+@font-face {
+    font-family: 'Lato';
+    src: url('czcionka/lato-bold.woff2') format('woff2'),
+         url('czcionka/lato-bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('czcionka/lato-regular.woff2') format('woff2'),
+         url('czcionka/lato-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+	font-display: swap;
+}
+
+* {
+    font-family: "Lato";
+    text-align: center;
+    color: #333;
+}
+
+header {
+    height: 100px;
+    width: 30%;
+    float: left;
+}
+
+nav {
+    height: 100px;
+    width: 70%;
+    float: right;
+}
+
+aside {
+    height: 100px;
+    width: 30%;
+    float: left;
+}
+
+footer {
+    height: 100px;
+    width: 70%;
+    float: right;
+}
+
+main {
+    background-color: #E0F2F1;
+    padding: 100px;
+}
+
+section {
+    height: 90px;
+    overflow: hidden;
+}
+
+.miniatury {
+    height: 90px;
+}
+
+ul {
+    text-align: left;
+}
+
+span {
+    padding-left: 30px;
+
+}
+
+span:nth-child(2) {
+    font-size: 200%;
+}
+span:nth-child(11) {
+    font-size: 200%;
+}
+span:nth-child(3) {
+    font-size: 150%;
+}
+span:nth-child(15) {
+    font-size: 150%;
+}
+span:nth-child(4) {
+    font-size: 120%;
+}
+span:nth-child(17) {
+    font-size: 120%;
+}
+span:nth-child(5) {
+    font-size: 170%;
+}
+span:nth-child(21) {
+    font-size: 170%;
+}
+span:nth-child(7) {
+    font-size: 130%;
+}
+span:nth-child(27) {
+    font-size: 130%;
+}
+span:nth-child(9) {
+    font-size: 160%;
+}
+span:nth-child(25) {
+    font-size: 160%;
+}
