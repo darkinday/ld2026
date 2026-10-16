@@ -27,6 +27,7 @@ header {
     height: 100px;
     width: 30%;
     float: left;
+    margin-bottom: 0px;
 }
 
 nav {
@@ -50,11 +51,13 @@ footer {
 main {
     background-color: #E0F2F1;
     padding: 100px;
+    float: left;
 }
 
 section {
     height: 90px;
     overflow: hidden;
+    clear: both;
 }
 
 .miniatury {
