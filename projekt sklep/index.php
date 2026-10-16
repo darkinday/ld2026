@@ -10,11 +10,21 @@
         <img src="" alt="">
     </header>
     <nav>
-        <a href="">zaloguj</a>
+        <a href="login.php">zaloguj</a>
     </nav>
     <main>
         <?php 
-        // skrypt generujacy oferty
+        $connection = mysqli_connect("localhost", "root", "", "projekt_sklep");
+        $sql = "SELECT * FROM product;";
+        $result = mysqli_fetch_all(mysqli_query($connection, $sql), MYSQLI_ASSOC);
+        foreach ($result as $item) {
+            echo "<section>";
+            echo "<img src='img/" . $item["file"] . "'>";
+            echo "<h3>" . $item['name'] . "</h3>";
+            echo "<p> cena: " . $item['price'] .  " </p>";
+            echo "<p> dostepna ilosc: " . $item['quantity'] .  " </p>";            
+
+        }
         ?>
     </main>
     <footer>
