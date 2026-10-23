@@ -62,7 +62,7 @@
             <?php 
                 if (isset($_GET['id'])) {
                     $id = $_GET['id'];
-                    $sql = "SELECT ROUND(AVG(temperatura),2) FROM pomiary WHERE id=$id;";
+                    $sql = "SELECT ROUND(AVG(temperatura),2) FROM pomiary WHERE id_miesiac=$id;";
                     $wynik = mysqli_fetch_row(mysqli_query($polaczenie, $sql));   
                     echo "<h3>" . $wynik[0] . "</h3>";
                 }
