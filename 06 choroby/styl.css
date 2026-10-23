@@ -1,0 +1,38 @@
+* {
+    font-family: 'Trebuchet MS';
+}
+
+header, nav, footer { 
+    background-color: #FF8F00;
+    padding: 10px;
+    text-align: right;
+}
+
+section { 
+    width: 50%;
+    height: 400px;
+}
+
+section:nth-child(1) {
+    background-color: #FFF8E1;
+}
+
+section:nth-child(2) {
+    background-color: #FFECB3;
+}
+
+a {
+    color: #FFECB3;
+    margin-left: 70px;
+    font-size: 180%;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+img {
+    
+}
