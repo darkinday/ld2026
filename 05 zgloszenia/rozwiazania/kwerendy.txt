@@ -1,0 +1,1 @@
+SELECT id, imie, nazwisko FROM personel WHERE status="policjant";
