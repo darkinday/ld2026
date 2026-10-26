@@ -1,3 +1,7 @@
+<?php 
+    $polaczenie = mysqli_connect("localhost", "root", "", "choroby");
+?>
+
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -21,25 +25,45 @@
             <h2>choroby zakazne</h2>
             <ol>
                 <?php 
-                // skrypt1
+                    $sql = "SELECT nazwa FROM choroby WHERE zakazna='T' ORDER BY nazwa ASC;";
+                    $wynik = mysqli_fetch_all(mysqli_query($polaczenie, $sql), MYSQLI_ASSOC);
+                    foreach ($wynik as $row) {
+                        echo "<li>" . $row["nazwa"] . "</li>";
+                    }
                 ?>
             </ol>
         </section>
         <section>
             <h2>Ojawy chorob</h2>
             <form action="zdrowie.php" method="post">
-                <select name="" id="">
+                <select name="choroby">
                     <?php 
-                    // skrpt2
+                    $sql2 = "SELECT id, nazwa FROM choroby;";
+                    $wynik = mysqli_fetch_all(mysqli_query($polaczenie, $sql2), MYSQLI_ASSOC);
+
+                    foreach ($wynik as $row){
+                        echo "<option value='" . $row["id"] . "'>" . $row["nazwa"] . "</option>";
+
+                    }
+
                     ?>
                 </select>
                 <input type="submit" value="sprawdz">
             </form>
-            <div>
+            <article>
                 <?php 
-                // skrypt3
+                    if (isset($_POST["choroby"])) {
+                        $id = $_POST["choroby"];
+                        $sql = "SELECT nazwa FROM objawy JOIN choroby_objawy ON objawy.id = choroby_objawy.id_objawy WHERE choroby_objawy.id_choroby = $id;";
+                        $wynik = mysqli_fetch_all(mysqli_query($polaczenie, $sql), MYSQLI_ASSOC);
+                        foreach ($wynik as $row) {
+                            echo "<span> " . $row["nazwa"] . " </span>";
+                        }
+                    }
+                            
+                mysqli_close($polaczenie);
                 ?> 
-            </div>
+            </article>
         </section>
     </main>
     <footer>

@@ -15,10 +15,12 @@ section {
 
 section:nth-child(1) {
     background-color: #FFF8E1;
+    float: left;
 }
 
 section:nth-child(2) {
     background-color: #FFECB3;
+    float: right;
 }
 
 a {
@@ -34,5 +36,31 @@ a:hover {
 }
 
 img {
-    
+    position: absolute;
+    top: 500px;
+    left: 100px;
+}
+
+article {
+    border: dotted black 1px;
+
+}
+
+span:nth-child(2) {
+    font-size: 120%;
+}
+span:nth-child(4) {
+    font-size: 240%;
+}
+span:nth-child(5) {
+    font-size: 150%;
+}
+span:nth-child(7) {
+    font-size: 160%;
+}
+span:nth-child(9) {
+    font-size: 130%;
+}
+span:nth-child(10) {
+    font-size: 190%;
 }
