@@ -14,9 +14,14 @@
         <section>
             <h2>personel</h2>
             <form action="index.php" method="post">
-                <input type="radio" name="policjant" checked>
-                <input type="radio" name="ratownik">
-                <input type="submit" value="pokaz"> MANGO MANGO
+
+                <label for="policjant">policjant</label>
+                <input type="radio" name="rola" checked="checked">
+
+                <label for="ratownik">ratownik</label>
+                <input type="radio" name="rola" for="rola">
+                <button type="submit"> pokaz </button>
+
             </form>
             <table>
                 <tr>
@@ -42,7 +47,7 @@
             <form action="index.php" method="post">
                 <label for="id"> wybierz id osoby z listy</label>
                 <input type="number" name="id" id="id">
-                <input type="submit" value="dodaj zgloszenie">   MANGO MANGO
+                <button type="submit">dodaj zgloszenie</button>
             </form>
                 <?php
                     // skrpyt3

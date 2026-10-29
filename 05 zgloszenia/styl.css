@@ -16,10 +16,12 @@ section {
 
 section:nth-child(1) {
     background-color: lightsalmon;
+    float: left;
 }
 
 section:nth-child(2) {
     background-color: darksalmon;
+    float: right;
 }
 h1, h2, h3 { 
     text-align: center;
@@ -37,5 +39,19 @@ table {
 
 li {
     text-decoration: none;
+}
+
+button {
+    background-color: maroon;
+    color: white;
+    margin-left: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+}
+
+button:hover { 
+    background-color: white;
+    color: maroon;
 }
 

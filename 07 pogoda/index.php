@@ -11,7 +11,7 @@
         <img src="slonce.png"alt="slonecznie">
     </header>
     <nav>
-        <h1>POGODA W EUROPIE</h1>
+        <h1>pogoda w europie</h1>
     </nav>
     <main>
         <article>
