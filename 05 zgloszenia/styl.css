@@ -1,0 +1,41 @@
+* {
+    font-family: tahoma;
+}
+
+header, footer { 
+    background-color: maroon;
+    color: white;
+    padding: 10px;
+}
+
+section { 
+    width: 50%;
+    height: 500px;
+
+}
+
+section:nth-child(1) {
+    background-color: lightsalmon;
+}
+
+section:nth-child(2) {
+    background-color: darksalmon;
+}
+h1, h2, h3 { 
+    text-align: center;
+}
+
+table, td { 
+    border: solid 1px maroon;
+}
+
+table {
+    width: 85%;
+    margin: auto;
+    border: solid;
+}
+
+li {
+    text-decoration: none;
+}
+

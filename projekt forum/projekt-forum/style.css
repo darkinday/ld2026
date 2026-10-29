@@ -1,0 +1,33 @@
+* {
+    color:blueviolet;
+    font-family: comic sans ms;
+}
+body {
+    background-color:aqua;
+}
+button {
+    background-color:blueviolet;
+    color:aqua;
+}
+
+input {
+    border-radius: 20px;
+    color: red;
+    font-family: Courier;
+}
+label {
+    font-family: 'Courier New', Courier, monospace;
+    font-style: bold;
+    font-size: large;
+}
+
+a {
+    border: solid 4px blueviolet;
+}
+
+section {
+    border: double 100px blueviolet;
+    border-bottom: inset 200px blueviolet;
+    border-top: inset 200px blueviolet;
+    width: 200px;
+}
